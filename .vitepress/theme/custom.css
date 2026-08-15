@@ -1,0 +1,110 @@
+:root {
+  --vp-c-brand-1: #b42318;
+  --vp-c-brand-2: #d92d20;
+  --vp-c-brand-3: #f04438;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #b42318 20%, #f79009 80%);
+}
+
+.VPHome .VPHero {
+  padding-bottom: 48px;
+}
+
+.VPHome .VPHero .name {
+  letter-spacing: -0.04em;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 32px 0 48px;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 10px 16px;
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.action:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.action.primary {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+
+.action.primary:hover {
+  background: var(--vp-c-brand-2);
+  color: white;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0 48px;
+}
+
+.chapter-card {
+  display: flex;
+  min-height: 130px;
+  flex-direction: column;
+  gap: 9px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 18px;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 8px 24px rgb(16 24 40 / 8%);
+  transform: translateY(-2px);
+}
+
+.chapter-card strong {
+  line-height: 1.5;
+}
+
+.chapter-card > span:last-child {
+  margin-top: auto;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+.chapter-number {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vp-doc img {
+  max-height: 460px;
+  margin: 18px auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+.vp-doc h2 {
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+}
